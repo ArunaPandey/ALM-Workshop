@@ -10,7 +10,7 @@ steps:
     DefaultVersion: true
 - task: PowerPlatformPackSolution@2
   inputs:
-    SolutionSourceFolder: 'ContosoDemo'
+    SolutionSourceFolder: '.'
     SolutionOutputFile: 'packed-solution/contoso_university_core.zip'
     SolutionType: 'Both'
 - task: PublishPipelineArtifact@1
