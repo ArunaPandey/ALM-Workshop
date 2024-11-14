@@ -15,6 +15,11 @@ jobs:
       SolutionSourceFolder: '.'
       SolutionOutputFile: 'packed-solution/contoso_university_core.zip'
       SolutionType: 'Both'
+  - task: CopyFiles@2
+    inputs:
+     SourceFolder: '.'
+     Contents: '**\.deploymentSettingsprod.json'
+     TargetFolder: 'packed-solution'
   - task: PublishPipelineArtifact@1
     inputs:
       targetPath: 'packed-solution'
